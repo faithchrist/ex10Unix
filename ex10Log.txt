@@ -1,0 +1,118 @@
+Script started on Thu Nov 14 11:24:18 2019
+[?1034hbash-3.2$ ls
+courses.txt	ex10Log.txt
+bash-3.2$ grep "CSC" courses.txt
+CSC 220 
+CSC 099
+CSC 230
+bash-3.2$ ls.[K -al
+total 16
+drwxr-xr-x   4 christf1  LIONS\Domain Users   136 Nov 14 11:30 .
+drwxr-xr-x+ 46 christf1  LIONS\Domain Users  1564 Nov 14 11:30 ..
+-rw-r--r--   1 christf1  LIONS\Domain Users    88 Nov 14 11:30 courses.txt
+-rw-r--r--   1 christf1  LIONS\Domain Users   164 Nov 14 11:37 ex10Log.txt
+bash-3.2$ ls - l
+ls: -: No such file or directory
+ls: l: No such file or directory
+bash-3.2$ ls -l
+total 16
+-rw-r--r--  1 christf1  LIONS\Domain Users   88 Nov 14 11:30 courses.txt
+-rw-r--r--  1 christf1  LIONS\Domain Users  483 Nov 14 11:37 ex10Log.txt
+bash-3.2$ ls -al |[C[Cgrep "cou"
+-rw-r--r--   1 christf1  LIONS\Domain Users    88 Nov 14 11:30 courses.txt
+bash-3.2$ ls -al| grep "Nov"
+drwxr-xr-x   4 christf1  LIONS\Domain Users   136 Nov 14 11:30 .
+drwxr-xr-x+ 46 christf1  LIONS\Domain Users  1564 Nov 14 11:30 ..
+-rw-r--r--   1 christf1  LIONS\Domain Users    88 Nov 14 11:30 courses.txt
+-rw-r--r--   1 christf1  LIONS\Domain Users   867 Nov 14 11:40 ex10Log.txt
+bash-3.2$ ls -al| |[C grep "cou"
+-rw-r--r--   1 christf1  LIONS\Domain Users    88 Nov 14 11:30 courses.txt
+bash-3.2$ man grep
+[?1049h[?1h=
+GREP(1)                   BSD General Commands Manual                  GREP(1)
+
+[1mNAME[0m
+     [1mgrep[0m, [1megrep[0m, [1mfgrep[0m, [1mzgrep[0m, [1mzegrep[0m, [1mzfgrep[0m -- file pattern searcher
+
+[1mSYNOPSIS[0m
+     [1mgrep[0m [[1m-abcdDEFGHhIiJLlmnOopqRSsUVvwxZ[0m] [[1m-A[0m [4mnum[24m] [[1m-B[0m [4mnum[24m] [[1m-C[0m[[4mnum[24m]]
+          [[1m-e[0m [4mpattern[24m] [[1m-f[0m [4mfile[24m] [[1m--binary-files[0m=[4mvalue[24m] [[1m--color[0m[=[4mwhen[24m]]
+          [[1m--colour[0m[=[4mwhen[24m]] [[1m--context[0m[=[4mnum[24m]] [[1m--label[0m] [[1m--line-buffered[0m]
+          [[1m--null[0m] [[4mpattern[24m] [[4mfile[24m [4m...[24m]
+
+[1mDESCRIPTION[0m
+     The [1mgrep[0m utility searches any given input files, selecting lines that
+     match one or more patterns.  By default, a pattern matches an input line
+     if the regular expression (RE) in the pattern matches the input line
+     without its trailing newline.  An empty expression matches every line.
+     Each input line that matches at least one of the patterns is written to
+     the standard output.
+
+     [1mgrep[0m is used for simple patterns and basic regular expressions (BREs);
+     [1megrep[0m can handle extended regular expressions (EREs).  See re_format(7)
+     for more information on regular expressions.  [1mfgrep[0m is quicker than both
+:[K[K     [1mgrep[0m and [1megrep[0m, but can only handle fixed patterns (i.e. it does not
+:[K[K[?1l>[?1049lbash-3.2$ 
+bash-3.2$ sort cpu[K[Kourses.txt
+CSC 099
+CSC 220 
+CSC 230
+FSP Race and Ethnicity
+MAT 120
+MAT 120
+MAT 127
+WRI 101
+WRI 102
+bash-3.2$ sort[K[K[K[Ksort courses.txt > courses-sorted.txt
+bash-3.2$ cat courses-sorted.txt
+CSC 099
+CSC 220 
+CSC 230
+FSP Race and Ethnicity
+MAT 120
+MAT 120
+MAT 127
+WRI 101
+WRI 102
+bash-3.2$ whoami
+christf1
+bash-3.2$ users
+christf1
+bash-3.2$ who
+christf1 console  Nov 14 11:10 
+christf1 ttys000  Nov 14 11:19 
+christf1 ttys002  Nov 14 11:25 
+bash-3.2$ TEMP=""U"n"i"x" "s"h"e"l"l" "s"c"r"i"p"t"i"n"g"[C
+bash-3.2$ echo $TEMP
+Unix shell scripting
+bash-3.2$ TEMP2=8
+bash-3.2$ echo$ $[CTEMP2
+8
+bash-3.2$ ls
+courses-sorted.txt	ex10Log.txt
+courses.txt		myFirstScript.sh
+bash-3.2$ ./myFirstScript.sh
+bash: ./myFirstScript.sh: Permission denied
+bash-3.2$ ls -l
+total 32
+-rw-r--r--  1 christf1  LIONS\Domain Users    88 Nov 14 11:45 courses-sorted.txt
+-rw-r--r--  1 christf1  LIONS\Domain Users    88 Nov 14 11:30 courses.txt
+-rw-r--r--  1 christf1  LIONS\Domain Users  3640 Nov 14 11:59 ex10Log.txt
+-rw-r--r--  1 christf1  LIONS\Domain Users    97 Nov 14 11:59 myFirstScript.sh
+bash-3.2$ chmod u+x myFirstScript.sh
+bash-3.2$ chmod u+x myFirstScript.sh[C[C[C[C[C[C[C[C[C[Cls -l[K./myFirstScript.sh[C[C[C[C[C[C[C[C[C[Cls[K./myFirstScript.sh
+Hi There
+total 32
+drwxr-xr-x   6 christf1  LIONS\Domain Users   204 Nov 14 11:59 .
+drwxr-xr-x+ 46 christf1  LIONS\Domain Users  1564 Nov 14 11:59 ..
+-rw-r--r--   1 christf1  LIONS\Domain Users    88 Nov 14 11:45 courses-sorted.txt
+-rw-r--r--   1 christf1  LIONS\Domain Users    88 Nov 14 11:30 courses.txt
+-rw-r--r--   1 christf1  LIONS\Domain Users  4089 Nov 14 12:01 ex10Log.txt
+-rwxr--r--   1 christf1  LIONS\Domain Users    97 Nov 14 11:59 myFirstScript.sh
+CSC 220 
+CSC 099
+CSC 230
+bash-3.2$ ./myFirstScript.sh[C[C[C[C[C[C[C[C[C[C[Kexit
+exit
+
+Script done on Thu Nov 14 12:03:13 2019
